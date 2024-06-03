@@ -19,9 +19,16 @@ repositories {
 
 dependencies {
 
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    // // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    // testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+
    
+   // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:6.9.10'
+
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
 
@@ -39,3 +46,18 @@ dependencies {
 //test.dependsOn startScript
 
 mainClassName = 'demo.App'
+
+
+test{
+    useTestNG(){
+        //suites "src/test/resources/testng.xml"
+    }
+       testLogging {
+		events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
+        exceptionFormat = 'full'
+
+        // Optionally do:
+        showStackTraces = true
+	}
+
+}

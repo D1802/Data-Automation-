@@ -1,0 +1,11 @@
+<!-- testng.xml -->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Web Data Automation Suite">
+    <test name="Hockey Teams Data Test and Oscar Winn Award Data Test">
+        <classes>
+            
+            <class name="demo.WebScrapper"/>
+
+        </classes>
+    </test>
+</suite>

@@ -41,7 +41,7 @@ public class WebScrapper {
         driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true, description = "Hockey Team Data Test")
     public void testCase01() {
         try {
 
@@ -99,7 +99,7 @@ public class WebScrapper {
         }
     }
 
-    @Test(enabled = true)
+    @Test(enabled = true,description = "Oscar Wining Award Data Test")
     public void testCase02() {
 
         try {

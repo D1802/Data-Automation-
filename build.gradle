@@ -50,7 +50,7 @@ mainClassName = 'demo.App'
 
 test{
     useTestNG(){
-        //suites "src/test/resources/testng.xml"
+        suites "src/test/resources/testng.xml"
     }
        testLogging {
 		events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"

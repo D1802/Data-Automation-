@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,20 +16,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-import java.time.Instant;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class JavaUtility {
 
-    public static void button_clikeble(ChromeDriver driver, WebElement elmentToClick) {
+    public static boolean button_clikeble(ChromeDriver driver, WebElement elmentToClick) {
 
+        boolean status = false;  
         try {
             if (elmentToClick != null && elmentToClick.isDisplayed()) {
                 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+                JavascriptExecutor jsExecutor =  (JavascriptExecutor) driver;
+                jsExecutor.executeScript("arguments[0].scrollIntoView(true);", elmentToClick);
+
                 wait.until(ExpectedConditions.visibilityOf(elmentToClick));
                 elmentToClick.click();
+                status = true;
             }
 
             else
@@ -37,7 +41,7 @@ public class JavaUtility {
             // TODO: handle exception
             System.out.println("Exception: " + e.getMessage());
         }
-
+        return status;
     }
 
     public static void enter_text(WebElement inputBox, String keysToSend) {
@@ -65,19 +69,14 @@ public class JavaUtility {
     }
 
     public static long epochTime() {
-        // Specify the maximum and Minimum Limit of Epoch Time
-        long minEpochTime = Instant.parse("1970-01-01T00:00:00Z").getEpochSecond();
-        long maxEpochTime = Instant.parse("2030-01-01T00:00:00Z").getEpochSecond();
-
-        // Randomise the Epoch Time
-        long randomEpochTime = ThreadLocalRandom.current().nextLong(minEpochTime, maxEpochTime);
+        long randomEpochTime = System.currentTimeMillis()/1000;
         return randomEpochTime;
     }
 
-    public static void printData(String[] str, List<LinkedHashMap<String, String>> data) {
+    public static void printData(String[] str, List<LinkedHashMap<String, Object>> data) {
 
         // Iterate over the ArrayList and print each HashMap in the specified order
-        for (LinkedHashMap<String, String> map : data) {
+        for (LinkedHashMap<String, Object> map : data) {
             for (String key : str) {
                 if (map.containsKey(key)) {
                     System.out.println("Key: " + key + ", Value: " + map.get(key));
@@ -88,7 +87,7 @@ public class JavaUtility {
 
     }
 
-    public static void saveToJSONFile(String name, String rmPath, List<LinkedHashMap<String, String>> data) {
+    public static void saveToJSONFile(String name, String rmPath, List<LinkedHashMap<String, Object>> data) {
 
         // Create the Object of Mapper provide the functionality for read or write in JSON
         ObjectMapper mapper = new ObjectMapper();

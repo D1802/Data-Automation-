@@ -2,50 +2,150 @@
   "name" : "Buffalo Sabres",
   "year" : "1990",
   "pct" : "0.388",
-  "Epoch Time" : "920305443"
+  "Epoch Time" : "1717582239"
 }, {
   "name" : "Buffalo Sabres",
   "year" : "1990",
   "pct" : "0.388",
-  "Epoch Time" : "1019728247"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Minnesota North Stars",
   "year" : "1990",
   "pct" : "0.338",
-  "Epoch Time" : "673241781"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "New York Islanders",
   "year" : "1990",
   "pct" : "0.312",
-  "Epoch Time" : "1825573620"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Quebec Nordiques",
   "year" : "1990",
   "pct" : "0.2",
-  "Epoch Time" : "727059928"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Toronto Maple Leafs",
   "year" : "1990",
   "pct" : "0.287",
-  "Epoch Time" : "1225679523"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Vancouver Canucks",
   "year" : "1990",
   "pct" : "0.35",
-  "Epoch Time" : "662128665"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Winnipeg Jets",
   "year" : "1990",
   "pct" : "0.325",
-  "Epoch Time" : "1595411165"
+  "Epoch Time" : "1717582240"
 }, {
   "name" : "Buffalo Sabres",
   "year" : "1990",
   "pct" : "0.388",
-  "Epoch Time" : "1572564935"
+  "Epoch Time" : "1717582241"
 }, {
   "name" : "Buffalo Sabres",
   "year" : "1990",
   "pct" : "0.388",
-  "Epoch Time" : "801022273"
+  "Epoch Time" : "1717582241"
+}, {
+  "name" : "Hartford Whalers",
+  "year" : "1991",
+  "pct" : "0.325",
+  "Epoch Time" : "1717582242"
+}, {
+  "name" : "Quebec Nordiques",
+  "year" : "1991",
+  "pct" : "0.25",
+  "Epoch Time" : "1717582243"
+}, {
+  "name" : "San Jose Sharks",
+  "year" : "1991",
+  "pct" : "0.212",
+  "Epoch Time" : "1717582243"
+}, {
+  "name" : "Toronto Maple Leafs",
+  "year" : "1991",
+  "pct" : "0.375",
+  "Epoch Time" : "1717582243"
+}, {
+  "name" : "Edmonton Oilers",
+  "year" : "1992",
+  "pct" : "0.31",
+  "Epoch Time" : "1717582243"
+}, {
+  "name" : "Edmonton Oilers",
+  "year" : "1992",
+  "pct" : "0.31",
+  "Epoch Time" : "1717582243"
+}, {
+  "name" : "Ottawa Senators",
+  "year" : "1992",
+  "pct" : "0.119",
+  "Epoch Time" : "1717582245"
+}, {
+  "name" : "San Jose Sharks",
+  "year" : "1992",
+  "pct" : "0.131",
+  "Epoch Time" : "1717582245"
+}, {
+  "name" : "Tampa Bay Lightning",
+  "year" : "1992",
+  "pct" : "0.274",
+  "Epoch Time" : "1717582245"
+}, {
+  "name" : "Mighty Ducks of Anaheim",
+  "year" : "1993",
+  "pct" : "0.393",
+  "Epoch Time" : "1717582245"
+}, {
+  "name" : "Edmonton Oilers",
+  "year" : "1993",
+  "pct" : "0.298",
+  "Epoch Time" : "1717582245"
+}, {
+  "name" : "Florida Panthers",
+  "year" : "1993",
+  "pct" : "0.393",
+  "Epoch Time" : "1717582247"
+}, {
+  "name" : "Hartford Whalers",
+  "year" : "1993",
+  "pct" : "0.321",
+  "Epoch Time" : "1717582247"
+}, {
+  "name" : "Hartford Whalers",
+  "year" : "1993",
+  "pct" : "0.321",
+  "Epoch Time" : "1717582247"
+}, {
+  "name" : "Ottawa Senators",
+  "year" : "1993",
+  "pct" : "0.167",
+  "Epoch Time" : "1717582247"
+}, {
+  "name" : "Florida Panthers",
+  "year" : "1993",
+  "pct" : "0.393",
+  "Epoch Time" : "1717582248"
+}, {
+  "name" : "Tampa Bay Lightning",
+  "year" : "1993",
+  "pct" : "0.357",
+  "Epoch Time" : "1717582248"
+}, {
+  "name" : "Winnipeg Jets",
+  "year" : "1993",
+  "pct" : "0.286",
+  "Epoch Time" : "1717582248"
+}, {
+  "name" : "Mighty Ducks of Anaheim",
+  "year" : "1994",
+  "pct" : "0.333",
+  "Epoch Time" : "1717582248"
+}, {
+  "name" : "Dallas Stars",
+  "year" : "1994",
+  "pct" : "0.354",
+  "Epoch Time" : "1717582248"
 } ]

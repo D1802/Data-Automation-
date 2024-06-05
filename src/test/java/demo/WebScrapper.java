@@ -43,6 +43,7 @@ public class WebScrapper {
 
     @Test(enabled = true, description = "Hockey Team Data Test")
     public void testCase01() {
+
         try {
 
             System.out.println("Start Test Case 01");
@@ -53,43 +54,53 @@ public class WebScrapper {
             JavaUtility.navigateTo(driver, "https://www.scrapethissite.com/pages/");
 
             WebElement hockeyPage = driver.findElement(By.partialLinkText("Hockey"));
-            JavaUtility.button_clikeble(driver, hockeyPage);
+            boolean status = JavaUtility.button_clikeble(driver, hockeyPage);
+
+            org.testng.Assert.assertTrue(status,"Element is Not Clcik to the hockey Page");
+            // Declare the Listof LiknkedHashMap so that the insertion order is maintain
+            ArrayList<LinkedHashMap<String, Object>> hockeyTeam = new ArrayList<>();
 
             String[] info = { "name", "year", "pct" };
+            for (int j = 1; j <= 4; j++) { // Click to 4 pages
 
-            // Get the List of WebElement has value percentage
-            List<WebElement> pct = driver.findElements(By.xpath("//tr//td[contains(@class,'pct')]"));
-            // Declare the Listof LiknkedHashMap so that the insertion order is maintain
-            ArrayList<LinkedHashMap<String, String>> arrayListOfHashmaps = new ArrayList<>();
+                WebElement page = driver.findElement(By.xpath("//a[contains(@href,'" + j + "')]"));
+                JavaUtility.button_clikeble(driver, page);
+                List<WebElement> pct = driver.findElements(By.xpath("//tr//td[contains(@class,'pct')]"));
 
-            // Iterate over the percentage
-            for (WebElement element : pct) {
-                float winPCT = Float.parseFloat(element.getText().trim());
-                // if the Percentage is less than 40% then store the value in LinkedHashMap
-                if (winPCT < 0.40) {
-                    LinkedHashMap<String, String> hash = new LinkedHashMap<>();
-                    hash.clear();
-                    for (int i = 0; i < 3; i++) {
-                        // store each value of name,year and percentage and get by the webElement
-                        WebElement keyVal = driver.findElement(By.xpath("//tr//td[contains(text(),'"
-                                + element.getText().trim() + "')]/../td[contains(@class,'" + info[i] + "')]"));
+                // Iterate over the percentage
+                for (WebElement element : pct) {
+                    float winPCT = Float.parseFloat(element.getText().trim());
+                    if (element.getText().isEmpty()) {
+                        winPCT = 0;
+                    }
+                    // if the Percentage is less than 40% then store the value in LinkedHashMap
+                    if (winPCT < 0.40 && winPCT > 0) {
+                        LinkedHashMap<String, Object> hash = new LinkedHashMap<>();
+                        hash.clear();
+                        for (int i = 0; i < 3; i++) {
+                            // store each value of name,year and percentage and get by the webElement
+                            WebElement keyVal = driver.findElement(By.xpath("//tr//td[contains(text(),'"
+                                    + element.getText().trim() + "')]/../td[contains(@class,'" + info[i] + "')]"));
 
-                        hash.put(info[i], keyVal.getText().trim());
+                            hash.put(info[i], keyVal.getText().trim());
+
+                        }
+                        long epochTime = JavaUtility.epochTime();
+                        hash.put("Epoch Time", Long.toString(epochTime));
+                        // new hash add to hash array
+                        hockeyTeam.add(hash);
 
                     }
-                    long epochTime = JavaUtility.epochTime();
-                    hash.put("Epoch Time", Long.toString(epochTime));
-                    // new hash add to hash array
-                    arrayListOfHashmaps.add(hash);
-
                 }
+
             }
+
             // Define the desired order of keys
             String[] keyOrder = { "Epoch Time", "name", "year", "pct" };
-            JavaUtility.printData(keyOrder, arrayListOfHashmaps);
+            JavaUtility.printData(keyOrder, hockeyTeam);
 
             // Convert ArrayList<HashMap> to JSON
-            JavaUtility.saveToJSONFile(fileName, removeFilePath, arrayListOfHashmaps);
+            JavaUtility.saveToJSONFile(fileName, removeFilePath, hockeyTeam);
 
             System.out.println("End TestCase 01");
 
@@ -99,7 +110,7 @@ public class WebScrapper {
         }
     }
 
-    @Test(enabled = true,description = "Oscar Wining Award Data Test")
+    @Test(enabled = false, description = "Oscar Wining Award Data Test")
     public void testCase02() {
 
         try {
@@ -119,7 +130,7 @@ public class WebScrapper {
             JavaUtility.button_clikeble(driver, oscarPage);
 
             // Create the LinkedHashMap so that the insertion order is mentain
-            ArrayList<LinkedHashMap<String, String>> oscarWinner = new ArrayList<>();
+            ArrayList<LinkedHashMap<String, Object>> oscarWinner = new ArrayList<>();
             // Iterate the String array of Year and Store the value
             for (String str : Year) {
 
@@ -129,7 +140,6 @@ public class WebScrapper {
 
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//th[1]")));
 
-                // Store the Title,Nomination,Awared, and BestFilm (true or false) in the List
                 // of WebElement
                 List<WebElement> filmtitle = driver.findElements(By.xpath("//tbody//tr/td[@class='film-title']"));
                 List<WebElement> filmNomination = driver
@@ -140,7 +150,7 @@ public class WebScrapper {
                 // Iterte the For Loop to Stored only Top 5 Best Movies
                 for (int i = 0; i < 5; i++) {
 
-                    LinkedHashMap<String, String> oscar = new LinkedHashMap<>();
+                    LinkedHashMap<String, Object> oscar = new LinkedHashMap<>();
                     // oscar.clear();
                     oscar.put("Title", filmtitle.get(i).getText());// Add Title
                     oscar.put("Nomincations", filmNomination.get(i).getText()); // Add Nominations
@@ -148,10 +158,15 @@ public class WebScrapper {
 
                     // First Movies has Nominated as BestFilm Movie as Award Flag so the bestFilm
                     // contains True;
-                    if (i == 0) {
-                        oscar.put("bestFilm", "True");
-                    } else if (bestFilm.get(i).getText().isEmpty()) { // cheak for the movie return has an empty value or not
-                        oscar.put("bestFilm", "False");
+                    try {
+                        if (bestFilm.get(i).findElement(By.xpath("(./i[contains(@class,'glyphicon-flag')])"))
+                                .isDisplayed()) {
+                            oscar.put("bestFilm", true);
+                        }
+
+                    } catch (Exception e) {
+                        // TODO: handle exception and Add the 
+                        oscar.put("bestFilm", false);
                     }
 
                     oscar.put("Year", str);

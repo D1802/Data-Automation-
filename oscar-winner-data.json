@@ -2,210 +2,186 @@
   "Title" : "Spotlight",
   "Nomincations" : "6",
   "Awards" : "2",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2015",
-  "Epoch Time" : "40391220"
+  "Epoch Time" : "952790676"
 }, {
   "Title" : "Mad Max: Fury Road",
   "Nomincations" : "10",
   "Awards" : "6",
-  "bestFilm" : "False",
   "Year" : "2015",
-  "Epoch Time" : "1480910653"
+  "Epoch Time" : "1261217157"
 }, {
   "Title" : "The Revenant",
   "Nomincations" : "12",
   "Awards" : "3",
-  "bestFilm" : "False",
   "Year" : "2015",
-  "Epoch Time" : "184168502"
+  "Epoch Time" : "1350553014"
 }, {
   "Title" : "Bridge of Spies",
   "Nomincations" : "6",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2015",
-  "Epoch Time" : "887241281"
+  "Epoch Time" : "1536721267"
 }, {
   "Title" : "The Big Short",
   "Nomincations" : "5",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2015",
-  "Epoch Time" : "587939149"
+  "Epoch Time" : "1770140466"
 }, {
   "Title" : "Birdman",
   "Nomincations" : "9",
   "Awards" : "4",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2014",
-  "Epoch Time" : "649881772"
+  "Epoch Time" : "182433716"
 }, {
   "Title" : "The Grand Budapest Hotel",
   "Nomincations" : "9",
   "Awards" : "4",
-  "bestFilm" : "False",
   "Year" : "2014",
-  "Epoch Time" : "1115272122"
+  "Epoch Time" : "1077207655"
 }, {
   "Title" : "Whiplash",
   "Nomincations" : "5",
   "Awards" : "3",
-  "bestFilm" : "False",
   "Year" : "2014",
-  "Epoch Time" : "283000481"
+  "Epoch Time" : "146025563"
 }, {
   "Title" : "The Imitation Game",
   "Nomincations" : "8",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2014",
-  "Epoch Time" : "1637344498"
+  "Epoch Time" : "1218197945"
 }, {
   "Title" : "American Sniper",
   "Nomincations" : "6",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2014",
-  "Epoch Time" : "1166472644"
+  "Epoch Time" : "951930772"
 }, {
   "Title" : "12 Years a Slave",
   "Nomincations" : "9",
   "Awards" : "3",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2013",
-  "Epoch Time" : "1460304795"
+  "Epoch Time" : "625911262"
 }, {
   "Title" : "Gravity",
   "Nomincations" : "10",
   "Awards" : "7",
-  "bestFilm" : "False",
   "Year" : "2013",
-  "Epoch Time" : "1216409067"
+  "Epoch Time" : "1207633492"
 }, {
   "Title" : "Dallas Buyers Club",
   "Nomincations" : "6",
   "Awards" : "3",
-  "bestFilm" : "False",
   "Year" : "2013",
-  "Epoch Time" : "1128765121"
+  "Epoch Time" : "1088002983"
 }, {
   "Title" : "Frozen",
   "Nomincations" : "2",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2013",
-  "Epoch Time" : "1761809200"
+  "Epoch Time" : "429688196"
 }, {
   "Title" : "The Great Gatsby",
   "Nomincations" : "2",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2013",
-  "Epoch Time" : "769906910"
+  "Epoch Time" : "1863568853"
 }, {
   "Title" : "Argo",
   "Nomincations" : "7",
   "Awards" : "3",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2012",
-  "Epoch Time" : "1221018786"
+  "Epoch Time" : "1859112535"
 }, {
   "Title" : "Life of Pi",
   "Nomincations" : "11",
   "Awards" : "4",
-  "bestFilm" : "False",
   "Year" : "2012",
-  "Epoch Time" : "1019251545"
+  "Epoch Time" : "678447668"
 }, {
   "Title" : "Les Misérables",
   "Nomincations" : "8",
   "Awards" : "3",
-  "bestFilm" : "False",
   "Year" : "2012",
-  "Epoch Time" : "190236315"
+  "Epoch Time" : "1081752612"
 }, {
   "Title" : "Lincoln",
   "Nomincations" : "12",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2012",
-  "Epoch Time" : "962221437"
+  "Epoch Time" : "1550649357"
 }, {
   "Title" : "Django Unchained",
   "Nomincations" : "5",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2012",
-  "Epoch Time" : "1892323251"
+  "Epoch Time" : "1144272452"
 }, {
   "Title" : "The Artist",
   "Nomincations" : "10",
   "Awards" : "5",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2011",
-  "Epoch Time" : "1594727414"
+  "Epoch Time" : "806694491"
 }, {
   "Title" : "Hugo",
   "Nomincations" : "11",
   "Awards" : "5",
-  "bestFilm" : "False",
   "Year" : "2011",
-  "Epoch Time" : "1503567348"
+  "Epoch Time" : "1699131352"
 }, {
   "Title" : "The Iron Lady",
   "Nomincations" : "2",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2011",
-  "Epoch Time" : "354507846"
+  "Epoch Time" : "1477431014"
 }, {
   "Title" : "The Descendants",
   "Nomincations" : "5",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2011",
-  "Epoch Time" : "16014056"
+  "Epoch Time" : "353482660"
 }, {
   "Title" : "The Girl with the Dragon Tattoo",
   "Nomincations" : "5",
   "Awards" : "1",
-  "bestFilm" : "False",
   "Year" : "2011",
-  "Epoch Time" : "717080218"
+  "Epoch Time" : "1107328190"
 }, {
   "Title" : "The King's Speech",
   "Nomincations" : "12",
   "Awards" : "4",
-  "bestFilm" : "True",
+  "bestFilm" : true,
   "Year" : "2010",
-  "Epoch Time" : "1588626153"
+  "Epoch Time" : "702411095"
 }, {
   "Title" : "Inception",
   "Nomincations" : "8",
   "Awards" : "4",
-  "bestFilm" : "False",
   "Year" : "2010",
-  "Epoch Time" : "169246382"
+  "Epoch Time" : "250914989"
 }, {
   "Title" : "The Social Network",
   "Nomincations" : "8",
   "Awards" : "3",
-  "bestFilm" : "False",
   "Year" : "2010",
-  "Epoch Time" : "790353599"
+  "Epoch Time" : "1447851656"
 }, {
   "Title" : "The Fighter",
   "Nomincations" : "7",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2010",
-  "Epoch Time" : "389697366"
+  "Epoch Time" : "497364986"
 }, {
   "Title" : "Toy Story 3",
   "Nomincations" : "5",
   "Awards" : "2",
-  "bestFilm" : "False",
   "Year" : "2010",
-  "Epoch Time" : "657083620"
+  "Epoch Time" : "1355182590"
 } ]
